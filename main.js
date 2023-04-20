@@ -31,6 +31,16 @@ createApp({
             });
         },
 
+        toogleClass(task) {
+            if (task.todo == true) {
+
+                task.todo = false;
+            } else {
+                task.todo = true;
+            }
+
+
+        }
     },
     mounted() {
         this.readingList()

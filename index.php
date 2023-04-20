@@ -17,7 +17,7 @@
         <div class="ms_wrapper">
             <h1 class="text-center">Todo List</h1>
             <ul class="list-group ">
-                <li class="list-group-item" v-for="todo in arrayList" :class="(todo.todo == true) ? 'done' : '' ">{{todo.task}}</li>
+                <li class="list-group-item" v-for="todo in arrayList" :class="(todo.todo == true) ? 'done' : '' " @click="toogleClass(todo)">{{todo.task}}</li>
             </ul>
             <div class="ms_wrapper_input mt-3">
                 <input type="text" v-model="addToDo" class="px-4">
