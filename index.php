@@ -17,12 +17,13 @@
     <div class="container d-flex justify-content-center">
         <div class="ms_wrapper">
             <h1 class="text-center">Todo List</h1>
-            <ul class="list-group ">
+            <ul class="list-group " v-if="arrayList.length > 0">
                 <li class="list-group-item d-flex justify-content-between" v-for="(todo,index) in arrayList" :class="(todo.todo == true) ? 'done' : '' " @click="toogleClass(todo)">
                     <span class="ms_text_description">{{todo.task}}</span>
                     <span><i class="fa-solid fa-trash ms_icon" @click="removeTask(index)"></i></span>
                 </li>
             </ul>
+            <div v-else> HAI FINITO TUTTO !!!</div>
             <div class="ms_wrapper_input mt-3">
                 <input type="text" v-model="addToDo" class="px-4">
             </div>
