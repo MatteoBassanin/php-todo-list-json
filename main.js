@@ -29,7 +29,8 @@ createApp({
                 this.arrayList = response.data;
                 this.addToDo = "";
             });
-        }
+        },
+
     },
     mounted() {
         this.readingList()
