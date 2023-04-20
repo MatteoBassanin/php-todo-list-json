@@ -38,7 +38,12 @@ createApp({
             } else {
                 task.todo = true;
             }
-        }
+        },
+
+        removeTask(index) {
+            this.arrayList.splice(index, 1);
+        },
+
     },
     mounted() {
         this.readingList()
