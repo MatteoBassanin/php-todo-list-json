@@ -38,8 +38,6 @@ createApp({
             } else {
                 task.todo = true;
             }
-
-
         }
     },
     mounted() {
