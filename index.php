@@ -13,11 +13,21 @@
     
 
 <div id="app">
-    <ul>
-        <li v-for="todo in arrayList" :class="(todo.todo == true) ? 'done' : '' ">{{todo.task}}</li>
-    </ul>
-    <input type="text" v-model="addToDo">
-    <button type="button" class="btn btn-primary" @click="addToDoList">Aggiungi alla Lista</button>
+    <div class="container d-flex justify-content-center">
+        <div class="ms_wrapper">
+            <h1 class="text-center">Todo List</h1>
+            <ul class="list-group ">
+                <li class="list-group-item" v-for="todo in arrayList" :class="(todo.todo == true) ? 'done' : '' ">{{todo.task}}</li>
+            </ul>
+            <div class="ms_wrapper_input mt-3">
+                <input type="text" v-model="addToDo" class="px-4">
+            </div>
+            <div class="ms_button_wrapper mt-3">
+                <button type="button" class="btn btn-primary px-5" @click="addToDoList">Aggiungi alla Lista</button>
+            </div>
+        </div>
+
+    </div>
 
 
 
