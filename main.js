@@ -10,7 +10,7 @@ createApp({
         readingList() {
             axios.get("server.php")
                 .then(response => {
-                    this.arrayList = response.data.data;
+                    this.arrayList = response.data;
                     console.log(this.arrayList);
                 })
         },
