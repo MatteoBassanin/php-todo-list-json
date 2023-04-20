@@ -11,7 +11,12 @@
 <body>
     
 
-<div id="app">{{ message }}
+<div id="app">
+    <ul>
+        <li v-for="todo in arrayList">{{todo.task}}</li>
+    </ul>
+    <input type="text" v-model="addToDo">
+    <button type="button" class="btn btn-primary" @click="addToDoList">Aggiungi alla Lista</button>
 
 
 

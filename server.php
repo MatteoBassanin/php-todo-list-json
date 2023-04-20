@@ -1,6 +1,6 @@
 <?php
 
-$arrayListToDo = [
+$arrayListToDo = [ 
         [
             "task" => "HTML" ,
             "todo" => true,
@@ -23,6 +23,12 @@ $arrayListToDo = [
         ],
     ];
    
+    if(isset($_POST["newTodo"])){
+        $arrayListToDo[] = [
+            "task" =>  $_POST["newTodo"],
+            "todo" => false
+        ];
+    }
 
     header("Content-Type: application/json");
 
