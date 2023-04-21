@@ -25,7 +25,7 @@
             </ul>
             <div v-else> HAI FINITO TUTTO !!!</div>
             <div class="ms_wrapper_input mt-3">
-                <input type="text" v-model="addToDo" class="px-4">
+                <input type="text" v-model="addToDo" class="px-4" placeholder="Inserisci cosa devi fare">
             </div>
             <div class="ms_button_wrapper mt-3">
                 <button type="button" class="btn btn-primary px-5" @click="addToDoList">Aggiungi alla Lista</button>
